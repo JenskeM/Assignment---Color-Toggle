@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+body p {
+  text-align: center;
+}
+
+.nav-bar {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-rows: 40px;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+
+.menuButton {
+  width: 40px;
+  height: 100%;
+  background-color: #f98f39;
+  background-image: url("hamburger_menu.png");
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  opacity: 50%;
+}
+
+.nav-info {
+  font-size: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-info p {
+  align-self: center;
+}
+
+.nav-info ul {
+  font-size: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.nav-info ul li {
+  list-style: none;
+  padding-right: 10px;
+}
+
+.nav-sidebar {
+  position: fixed;
+  /* width: 150px; */
+  width: 0px;
+  font-size: 10px;
+}
+
+.nav-sidebar ul {
+  padding-top: 0px;
+  padding-left: 0px;
+  visibility: hidden;
+  margin: 0;
+  opacity: 0;
+  transition: width 300ms ease-in, opacity 300ms ease-in;
+}
+
+.nav-sidebar ul li {
+  list-style: none;
+  line-height: 30px;
+  opacity: 0;
+  transition: opacity 300ms ease-in;
+}
+
+.nav-sidebar ul li:hover {
+  opacity: 80%;
+}
+
+.nav-sidebar ul li input {
+  margin-left: 15px;
+  margin-right: 10px;
+  transform: scale(0.5) translateY(5px);
+  cursor: pointer;
+}
